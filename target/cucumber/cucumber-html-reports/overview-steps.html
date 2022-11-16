@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>16 Nov 2022, 16:48</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.cydeo.trycloud24.step_definitions.AddFileToTheFolder_Stepdef.the_user_uploads_a_file_with_the_upload_file_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="387941000">0.387</td>
+              <td class="duration" data-value="387941000">0.387</td>
+              <td class="duration" data-value="387941000">0.387</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.trycloud24.step_definitions.AddFileToTheFolder_Stepdef.user_choose_a_folder_from_the_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="1053544000">1.053</td>
+              <td class="duration" data-value="1053544000">1.053</td>
+              <td class="duration" data-value="1053544000">1.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.trycloud24.step_definitions.AddFileToTheFolder_Stepdef.user_clicks_the_add_icon_on_the_top_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="297016000">0.297</td>
+              <td class="duration" data-value="297016000">0.297</td>
+              <td class="duration" data-value="297016000">0.297</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.trycloud24.step_definitions.AddFileToTheFolder_Stepdef.verify_the_file_is_displayed_on_the_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="3092517000">3.092</td>
+              <td class="duration" data-value="3092517000">3.092</td>
+              <td class="duration" data-value="3092517000">3.092</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.trycloud24.step_definitions.Hooks.setupScenario()</td>
+              <td>1</td>
+              <td class="duration" data-value="38631019000">38.631</td>
+              <td class="duration" data-value="38631019000">38.631</td>
+              <td class="duration" data-value="38631019000">38.631</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.trycloud24.step_definitions.Hooks.teardownScenario(io.cucumber.java.Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="6052000">0.006</td>
+              <td class="duration" data-value="6052000">0.006</td>
+              <td class="duration" data-value="6052000">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.trycloud24.step_definitions.Managefolders_Stepdef.the_user_clicks_the_module(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4578695000">4.578</td>
+              <td class="duration" data-value="4578695000">4.578</td>
+              <td class="duration" data-value="4578695000">4.578</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.cydeo.trycloud24.step_definitions.Managefolders_Stepdef.user_on_the_dashboard_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="18065938000">18.065</td>
+              <td class="duration" data-value="18065938000">18.065</td>
+              <td class="duration" data-value="18065938000">18.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>8</td>
+            <td>8</td>
+            <td class="duration">8.264</td>
+            <td class="duration">38.631</td>
+            <td class="duration">1:6.112</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
